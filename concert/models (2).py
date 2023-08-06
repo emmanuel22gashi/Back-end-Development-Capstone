@@ -1,5 +1,4 @@
 from datetime import datetime
-
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
@@ -8,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 class Concert(models.Model):
+
     concert_name = models.CharField(max_length=255)
     duration = models.IntegerField()
     city = models.CharField(max_length=255)
@@ -47,6 +47,7 @@ class Photo(models.Model):
     event_state = models.CharField(max_length=255)
     event_city = models.CharField(max_length=255)
     event_date = models.DateField(default=datetime.now)
+
     class Meta:
         managed = False
 
